@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo mayorista y pedidos online.">
+    <title>Autoservicio Tomate | Productos y pedidos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span>Whatsapp 11-3355-0015 · Envios a tu hogar 🚲</span>
+            <span>Atención de lunes a domingo · 18:00 a 22:00</span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container header-main">
+            <a href="#" class="brand" aria-label="Autoservicio Tomate">
+                <span class="brand-mark">🍅</span>
+                <span>
+                    <strong>Autoservicio Tomate</strong>
+                    <small>Pedidos simples, compras rápidas</small>
+                </span>
+            </a>
+
+            <div class="search-wrap">
+                <label class="sr-only" for="search">Buscar productos</label>
+                <span class="search-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+                </span>
+                <input id="search" type="search" placeholder="Buscar producto">
+                <button type="button">Buscar</button>
+            </div>
+
+            <div class="header-actions">
+                <button type="button" class="account-link" id="accountButton" aria-label="Abrir mi cuenta">
+                    <span class="action-icon">◉</span>
+                    <span class="action-text">Mi cuenta<small id="accountStatus">Ingresar</small></span>
+                </button>
+                <button type="button" class="cart-button" aria-label="Abrir carrito">
+                    <span class="cart-icon">🛒</span>
+                    <span>
+                        <strong>Mi pedido</strong>
+                        <small>0 productos</small>
+                    </span>
+                    <b>0</b>
+                </button>
+                <button type="button" class="pending-order-button" id="pendingOrderButton" aria-label="Ver pedido pendiente" title="Ver pedido pendiente" hidden>
+                    <span aria-hidden="true">📋</span>
+                    <b id="pendingOrderBadge">1</b>
+                </button>
+            </div>
+        </div>
+
+        <div class="container category-nav" aria-label="Categorías">
+            <a class="active" href="#" data-category-target="home">Todo</a>
+            <a href="#" data-category-target="bebidas">Bebidas</a>
+            <a href="#" data-category-target="almacen">Almacén</a>
+            <a href="#" data-category-target="snacks">Snacks</a>
+            <a href="#" data-category-target="lacteos">Lácteos</a>
+            <a href="#" data-category-target="limpieza">Limpieza y Perfumería</a>
+            <a href="#" data-category-target="ofertas">Ofertas</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="home-view" id="homeView">
+        <section class="hero" aria-label="Información destacada">
+            <div class="container hero-slider" data-hero-slider>
+                <div class="hero-track" data-hero-track>
+                    <article class="hero-slide is-active" data-hero-slide="0">
+                        <div class="hero-grid">
+                            <div class="hero-copy">
+                                <span class="eyebrow">CATÁLOGO</span>
+                                <h1>Todo lo que necesitás para tu hogar!, <span>en un solo lugar.</span></h1>
+                                <p>Explorá productos, compará precios y armá tu pedido de forma rápida y sencilla.</p>
+
+                                <div class="hero-actions">
+                                    <a class="primary-btn" href="#productos">Ver productos <span>→</span></a>
+                                    <a class="secondary-btn" href="#bebidasView" data-category-target="bebidas">Explorar categorías</a>
+                                </div>
+                            </div>
+
+                            <div class="hero-card">
+                                <div class="hero-badge">PROMOS DE LA SEMANA</div>
+                                <div class="hero-product product-soda">
+                                    <div class="bottle bottle-1"></div>
+                                    <div class="bottle bottle-2"></div>
+                                    <div class="bottle bottle-3"></div>
+                                </div>
+                                <div class="hero-card-copy">
+                                    <span>Selección especial</span>
+                                    <strong>Ofertas destacadas</strong>
+                                    <p>Encontrá precios especiales en productos seleccionados.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="hero-slide" data-hero-slide="1">
+                        <div class="hero-grid">
+                            <div class="hero-copy">
+                                <span class="eyebrow">ENVÍOS</span>
+                                <h1>Nuestras zonas de reparto <span>cerca tuyo.</span></h1>
+                                <p>Coordinamos entregas en Lanús, Banfield y alrededores para que recibas tu pedido sin complicaciones.</p>
+
+                                <div class="hero-points">
+                                    <span>🚲 Entregas desde las 18:00</span>
+                                    <span>cualquier duda, consultá al whatsapp 11-3355-0015</span>
+                                </div>
+                            </div>
+
+                            <div class="hero-card hero-info-card">
+                                <div class="hero-info-header">
+                                    <span class="hero-badge">ZONAS DE REPARTO</span>
+                                    <strong>Consultá tu zona!</strong>
+                                </div>
+                                <div class="hero-zone-grid">
+                                    <div class="hero-zone-card">
+                                        <span>01</span>
+                                        <strong>Lanús</strong>
+                                        <small>Lunes a domingo · desde las 18:00</small>
+                                    </div>
+                                    <div class="hero-zone-card">
+                                        <span>02</span>
+                                        <strong>Banfield</strong>
+                                        <small>Lunes a domingo · desde las 18:00</small>
+                                    </div>
+                                    <div class="hero-zone-card hero-zone-wide">
+                                        <span>03</span>
+                                        <strong>Alrededores</strong>
+                                        <small>Consultá disponibilidad para tu zona.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="hero-slide" data-hero-slide="2">
+                        <div class="hero-grid">
+                            <div class="hero-copy">
+                                <span class="eyebrow">ATENCIÓN</span>
+                                <h1>Nuestros horarios <span>para tus pedidos.</span></h1>
+                                <p>Tomamos pedidos y coordinamos la atención durante la tarde y la noche, todos los días.</p>
+
+                                <div class="hero-points">
+                                    <span>🕕 Atención todos los días</span>
+                                    <span>📲 Pedidos online</span>
+                                </div>
+                            </div>
+
+                            <div class="hero-card hero-info-card">
+                                <div class="hero-info-header">
+                                    <span class="hero-badge">HORARIOS</span>
+                                    <strong>Cuándo encontrarnos</strong>
+                                </div>
+                                <div class="hero-schedule-list">
+                                    <div class="hero-schedule-row">
+                                        <div><strong>Lunes a jueves</strong><small>Atención y pedidos</small></div>
+                                        <b>18:00 — 22:00</b>
+                                    </div>
+                                    <div class="hero-schedule-row">
+                                        <div><strong>Viernes y sábado</strong><small>Horario extendido</small></div>
+                                        <b>18:00 — 00:00</b>
+                                    </div>
+                                    <div class="hero-schedule-row">
+                                        <div><strong>Domingo</strong><small>Atención y pedidos</small></div>
+                                        <b>18:00 — 23:00</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <button class="hero-arrow hero-arrow-prev" type="button" data-hero-prev aria-label="Slide anterior">‹</button>
+                <button class="hero-arrow hero-arrow-next" type="button" data-hero-next aria-label="Slide siguiente">›</button>
+
+                <div class="hero-dots" role="tablist" aria-label="Seleccionar información destacada">
+                    <button class="is-active" type="button" role="tab" aria-selected="true" aria-label="Ir al slide 1" data-hero-dot="0"></button>
+                    <button type="button" role="tab" aria-selected="false" aria-label="Ir al slide 2" data-hero-dot="1"></button>
+                    <button type="button" role="tab" aria-selected="false" aria-label="Ir al slide 3" data-hero-dot="2"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section" id="categorias">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">COMPRÁ MÁS RÁPIDO</span>
+                        <h2>Encontrá lo que buscás</h2>
+                    </div>
+                    <a href="#">Ver todas →</a>
+                </div>
+
+                <div class="category-grid">
+                    <a class="category-card category-drinks" href="#" data-category-target="bebidas">
+                        <span class="category-icon">🥤</span>
+                        <strong>Bebidas</strong>
+                        <small>Gaseosas, aguas y energizantes</small>
+                    </a>
+                    <a class="category-card category-pantry" href="#" data-category-target="almacen">
+                        <span class="category-icon">🛒</span>
+                        <strong>Almacén</strong>
+                        <small>Secos y productos básicos</small>
+                    </a>
+                    <a class="category-card category-candy" href="#" data-category-target="snacks">
+                        <span class="category-icon">🍫</span>
+                        <strong>Snacks</strong>
+                        <small>Alfajores, caramelos y más</small>
+                    </a>
+                    <a class="category-card category-clean" href="#" data-category-target="limpieza">
+                        <span class="category-icon">🧼</span>
+                        <strong>Limpieza y perfumería</strong>
+                        <small>Para el hogar y tu negocio</small>
+                    </a>
+                    <a class="category-card category-care" href="#" data-category-target="lacteos">
+                        <span class="category-icon">🥛</span>
+                        <strong>Lácteos</strong>
+                        <small>Leches, yogures, quesos y más</small>
+                    </a>
+                    <a class="category-card category-offers" href="#" data-category-target="ofertas">
+                        <span class="category-icon">%</span>
+                        <strong>Ofertas</strong>
+                        <small>Precios especiales</small>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section" id="productos">
+            <div class="container">
+                <div class="section-heading products-heading">
+                    <div>
+                        <span class="eyebrow">PRODUCTOS DESTACADOS</span>
+                        <h2>Lo más pedido</h2>
+                    </div>
+                    <div class="view-toggle" role="group" aria-label="Vista de productos">
+                        <button class="selected" type="button" data-view="grid" aria-pressed="true">Cuadrícula</button>
+                        <button type="button" data-view="list" aria-pressed="false">Lista</button>
+                    </div>
+                </div>
+
+                <div class="products-toolbar">
+                    <button type="button" class="filter-button" id="catalogFilterButton" aria-controls="catalogFilterPanel" aria-expanded="false">☷ Filtrar y ordenar</button>
+                </div>
+
+                <div class="catalog-filter-panel" id="catalogFilterPanel" hidden>
+                    <label class="catalog-filter-field" for="catalogSort">
+                        <span>Ordenar por</span>
+                        <select id="catalogSort">
+                            <option value="recommended">Recomendados</option>
+                            <option value="price-asc">Precio: menor a mayor</option>
+                            <option value="price-desc">Precio: mayor a menor</option>
+                            <option value="name-asc">Nombre: A a Z</option>
+                        </select>
+                    </label>
+                    <label class="catalog-filter-field" for="catalogCategory">
+                        <span>Categoría</span>
+                        <select id="catalogCategory">
+                            <option value="">Todas</option>
+                        </select>
+                    </label>
+                    <label class="catalog-filter-check">
+                        <input type="checkbox" id="catalogPromotions">
+                        <span>Solo promociones</span>
+                    </label>
+                    <label class="catalog-filter-check">
+                        <input type="checkbox" id="catalogAvailable">
+                        <span>Solo disponibles</span>
+                    </label>
+                    <button type="button" class="catalog-reset-button" id="resetCatalogFilters">Limpiar filtros</button>
+                </div>
+
+                <div class="product-grid catalog-grid" id="catalogGrid" hidden></div>
+                <p class="catalog-empty" id="catalogEmpty" hidden>No hay productos que coincidan con estos filtros.</p>
+                <div class="catalog-results-footer" id="catalogResultsFooter" hidden>
+                    <span id="catalogResultCount" aria-live="polite"></span>
+                    <div class="catalog-results-actions">
+                        <button type="button" class="catalog-more-button" id="showMoreProducts">Mostrar más</button>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+
+                    <article class="product-card" data-product-id="00186" data-price="5100">
+                        <div class="product-image product-red">
+                            <span class="offer-tag">OFERTA</span>
+                            <div class="product-illustration can-red">
+                                <span>COLA</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Bebidas</span>
+                            <h3>Gaseosa Cola 2.5L × 1</h3>
+                            <p class="product-code">Cód. 00186</p>
+                            <div class="product-meta"><span class="in-stock">● Disponible</span><span>Pack x6</span></div>
+                            <div class="product-bottom">
+                                <div><small>Precio</small><strong>$ 5.100</strong></div>
+                                <button class="add-button" type="button" aria-label="Agregar producto">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-product-id="00422" data-price="2200">
+                        <div class="product-image product-blue">
+                            <div class="product-illustration bottle-blue">
+                                <span>AGUA</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Bebidas</span>
+                            <h3>Agua mineral 1,5 L × 1</h3>
+                            <p class="product-code">Cód. 00422</p>
+                            <div class="product-meta"><span class="in-stock">● Disponible</span><span>Pack x6</span></div>
+                            <div class="product-bottom">
+                                <div><small>Precio</small><strong>$ 2.200</strong></div>
+                                <button class="add-button" type="button" aria-label="Agregar producto">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-product-id="01984" data-price="4000">
+                        <div class="product-image product-gold">
+                            <span class="offer-tag warm">PROMO</span>
+                            <div class="product-illustration chips">
+                                <span>SNACK</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Snacks</span>
+                            <h3>Papas clásicas 10 g × 1</h3>
+                            <p class="product-code">Cód. 01984</p>
+                            <div class="product-meta"><span class="in-stock">● Disponible</span><span></span></div>
+                            <div class="product-bottom">
+                                <div><small>Precio</small><strong>$ 4.000</strong></div>
+                                <button class="add-button" type="button" aria-label="Agregar producto">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-product-id="62843" data-price="2648">
+                        <div class="product-image product-green">
+                            <div class="product-illustration soap">
+                                <span>CLEAN</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Limpieza</span>
+                            <h3>Jabón líquido 800 ml x 1</h3>
+                            <p class="product-code">Cód. 62843</p>
+                            <div class="product-meta"><span class="in-stock">● Disponible</span><span></span></div>
+                            <div class="product-bottom">
+                                <div><small>Precio</small><strong>$ 2.648</strong></div>
+                                <button class="add-button" type="button" aria-label="Agregar producto">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-product-id="12112" data-price="1500" data-out-of-stock="true">
+                        <div class="product-image product-purple">
+                            <div class="product-illustration cookies">
+                                <span>GALLETAS</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Almacén</span>
+                            <h3>Galletitas Oreo 118 g × 1</h3>
+                            <p class="product-code">Cód. 12112</p>
+                            <div class="product-meta"><span class="out-stock">● Sin stock</span><span></span></div>
+                            <div class="product-bottom">
+                                <div><small>Precio</small><strong>$ 1.500</strong></div>
+                                <button class="add-button disabled" type="button" disabled>+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-product-id="07531" data-price="1800">
+                        <div class="product-image product-orange">
+                            <span class="offer-tag">OFERTA</span>
+                            <div class="product-illustration pasta">
+                                <span>PASTA</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Almacén</span>
+                            <h3>Fideos Luccheti 500 g × 1</h3>
+                            <p class="product-code">Cód. 07531</p>
+                            <div class="product-meta"><span class="in-stock">● Disponible</span><span></span></div>
+                            <div class="product-bottom">
+                                <div><small>Precio</small><strong>$ 1.800</strong></div>
+                                <button class="add-button" type="button" aria-label="Agregar producto">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-product-id="06421" data-price="8200">
+                        <div class="product-image product-brown">
+                            <div class="product-illustration coffee">
+                                <span>CAFÉ</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Almacén</span>
+                            <h3>Café molido Morenita 500 g × 1</h3>
+                            <p class="product-code">Cód. 06421</p>
+                            <div class="product-meta"><span class="in-stock">● Disponible</span><span></span></div>
+                            <div class="product-bottom">
+                                <div><small>Precio</small><strong>$ 8.200</strong></div>
+                                <button class="add-button" type="button" aria-label="Agregar producto">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container benefits-grid">
+                <div>
+                    <span class="benefit-icon">🚲</span>
+                    <div><strong>Envíos coordinados</strong><span>Consultá disponibilidad según tu zona.</span></div>
+                </div>
+                <div>
+                    <span class="benefit-icon">📦</span>
+                    <div><strong>Pedidos desde tu dispositivo favorito</strong><span>Armá tu pedido desde cualquier dispositivo.</span></div>
+                </div>
+                <div>
+                    <span class="benefit-icon">💳</span>
+                    <div><strong>Pago a convenir</strong><span>Elegí efectivo, tarjeta o Mercado Pago.</span></div>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <section class="category-view" id="bebidasView" hidden>
+            <div class="container">
+                <div class="category-navigation">
+                    <button type="button" class="category-back" id="backToHome">← Volver al inicio</button>
+                    <button type="button" class="category-next" data-category-target="almacen">Almacén →</button>
+                </div>
+
+                <div class="category-hero-heading">
+                    <span class="eyebrow">CATEGORÍA</span>
+                    <h2>Bebidas</h2>
+                    <p>Encontrá gaseosas, aguas, energizantes y otras bebidas.</p>
+                </div>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading">
+                        <div>
+                            <span class="eyebrow">BEBIDAS</span>
+                            <h3>Gaseosas</h3>
+                        </div>
+                    </div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="00186" data-price="5100" data-category="Gaseosas">
+                            <div class="category-product-visual product-red"><span>COLA</span></div>
+                            <div class="category-product-body"><small>Gaseosas</small><h4>Gaseosa Cola 2.5L</h4><strong>$ 5.100</strong><button class="add-button category-add" type="button" aria-label="Agregar Gaseosa Cola 2.5L">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="00187" data-price="4900" data-category="Gaseosas">
+                            <div class="category-product-visual product-red"><span>NARANJA</span></div>
+                            <div class="category-product-body"><small>Gaseosas</small><h4>Gaseosa Naranja 2.5L</h4><strong>$ 4.900</strong><button class="add-button category-add" type="button" aria-label="Agregar Gaseosa Naranja 2.5L">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="00188" data-price="4700" data-category="Gaseosas">
+                            <div class="category-product-visual product-orange"><span>LIMÓN</span></div>
+                            <div class="category-product-body"><small>Gaseosas</small><h4>Gaseosa Lima Limón 2.5L</h4><strong>$ 4.700</strong><button class="add-button category-add" type="button" aria-label="Agregar Gaseosa Lima Limón 2.5L">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="00189" data-price="5200" data-category="Gaseosas">
+                            <div class="category-product-visual product-brown"><span>COLA ZERO</span></div>
+                            <div class="category-product-body"><small>Gaseosas</small><h4>Gaseosa Cola Zero 2.5L</h4><strong>$ 5.200</strong><button class="add-button category-add" type="button" aria-label="Agregar Gaseosa Cola Zero 2.5L">+</button></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading">
+                        <div>
+                            <span class="eyebrow">BEBIDAS</span>
+                            <h3>Aguas</h3>
+                        </div>
+                    </div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="00422" data-price="2200" data-category="Aguas">
+                            <div class="category-product-visual product-blue"><span>AGUA</span></div>
+                            <div class="category-product-body"><small>Aguas</small><h4>Agua mineral 1.5L</h4><strong>$ 2.200</strong><button class="add-button category-add" type="button" aria-label="Agregar Agua mineral 1.5L">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="00423" data-price="2400" data-category="Aguas">
+                            <div class="category-product-visual product-blue"><span>CON GAS</span></div>
+                            <div class="category-product-body"><small>Aguas</small><h4>Agua con gas 1.5L</h4><strong>$ 2.400</strong><button class="add-button category-add" type="button" aria-label="Agregar Agua con gas 1.5L">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="00424" data-price="1900" data-category="Aguas">
+                            <div class="category-product-visual product-blue"><span>500 ML</span></div>
+                            <div class="category-product-body"><small>Aguas</small><h4>Agua mineral 500 ml</h4><strong>$ 1.900</strong><button class="add-button category-add" type="button" aria-label="Agregar Agua mineral 500 ml">+</button></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading">
+                        <div>
+                            <span class="eyebrow">BEBIDAS</span>
+                            <h3>Energizantes</h3>
+                        </div>
+                    </div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="00701" data-price="2600" data-category="Energizantes">
+                            <div class="category-product-visual product-gold"><span>ENERGY</span></div>
+                            <div class="category-product-body"><small>Energizantes</small><h4>Bebida energizante 473 ml</h4><strong>$ 2.600</strong><button class="add-button category-add" type="button" aria-label="Agregar Bebida energizante 473 ml">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="00702" data-price="3200" data-category="Energizantes">
+                            <div class="category-product-visual product-red"><span>ENERGY MAX</span></div>
+                            <div class="category-product-body"><small>Energizantes</small><h4>Bebida energizante 500 ml</h4><strong>$ 3.200</strong><button class="add-button category-add" type="button" aria-label="Agregar Bebida energizante 500 ml">+</button></div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="category-view" id="almacenView" hidden>
+            <div class="container">
+                <div class="category-navigation">
+                    <button type="button" class="category-back" id="backFromAlmacen">← Volver al inicio</button>
+                    <button type="button" class="category-next" data-category-target="snacks">Snacks →</button>
+                </div>
+
+                <div class="category-hero-heading">
+                    <span class="eyebrow">CATEGORÍA</span>
+                    <h2>Almacén</h2>
+                    <p>Todo lo básico para tu casa, organizado por tipo de producto.</p>
+                </div>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading">
+                        <div><span class="eyebrow">ALMACÉN</span><h3>Pastas y secos</h3></div>
+                    </div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="07531" data-price="1800" data-category="Pastas y secos">
+                            <div class="category-product-visual product-orange"><span>PASTA</span></div>
+                            <div class="category-product-body"><small>Pastas y secos</small><h4>Fideos Luccheti 500 g</h4><strong>$ 1.800</strong><button class="add-button category-add" type="button" aria-label="Agregar Fideos Luccheti 500 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="A002" data-price="2100" data-category="Pastas y secos">
+                            <div class="category-product-visual product-gold"><span>ARROZ</span></div>
+                            <div class="category-product-body"><small>Pastas y secos</small><h4>Arroz largo fino 1 kg</h4><strong>$ 2.100</strong><button class="add-button category-add" type="button" aria-label="Agregar Arroz largo fino 1 kg">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="A003" data-price="2300" data-category="Pastas y secos">
+                            <div class="category-product-visual product-brown"><span>HARINA</span></div>
+                            <div class="category-product-body"><small>Pastas y secos</small><h4>Harina 000 1 kg</h4><strong>$ 2.300</strong><button class="add-button category-add" type="button" aria-label="Agregar Harina 000 1 kg">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="A004" data-price="1900" data-category="Pastas y secos">
+                            <div class="category-product-visual product-green"><span>LENTEJAS</span></div>
+                            <div class="category-product-body"><small>Pastas y secos</small><h4>Lentejas 400 g</h4><strong>$ 1.900</strong><button class="add-button category-add" type="button" aria-label="Agregar Lentejas 400 g">+</button></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading">
+                        <div><span class="eyebrow">ALMACÉN</span><h3>Conservas y básicos</h3></div>
+                    </div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="A008" data-price="1900" data-category="Conservas y básicos">
+                            <div class="category-product-visual product-green"><span>ATÚN</span></div>
+                            <div class="category-product-body"><small>Conservas y básicos</small><h4>Atún al natural 170 g</h4><strong>$ 1.900</strong><button class="add-button category-add" type="button" aria-label="Agregar Atún al natural 170 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="A009" data-price="1600" data-category="Conservas y básicos">
+                            <div class="category-product-visual product-red"><span>TOMATE</span></div>
+                            <div class="category-product-body"><small>Conservas y básicos</small><h4>Tomate triturado 520 g</h4><strong>$ 1.600</strong><button class="add-button category-add" type="button" aria-label="Agregar Tomate triturado 520 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="A010" data-price="1400" data-category="Conservas y básicos">
+                            <div class="category-product-visual product-gold"><span>MAÍZ</span></div>
+                            <div class="category-product-body"><small>Conservas y básicos</small><h4>Choclo en lata 300 g</h4><strong>$ 1.400</strong><button class="add-button category-add" type="button" aria-label="Agregar Choclo en lata 300 g">+</button></div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+
+        <section class="category-view" id="limpiezaView" hidden>
+            <div class="container">
+                <button type="button" class="category-back" id="backFromLimpieza">← Volver al inicio</button>
+
+                <div class="category-hero-heading">
+                    <span class="eyebrow">CATEGORÍA</span>
+                    <h2>Limpieza y Perfumería</h2>
+                    <p>Productos para mantener tu hogar limpio y cuidar tu higiene personal.</p>
+                </div>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading"><div><span class="eyebrow">LIMPIEZA</span><h3>Hogar</h3></div></div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="62843" data-price="2648" data-category="Limpieza">
+                            <div class="category-product-visual product-green"><span>CLEAN</span></div>
+                            <div class="category-product-body"><small>Limpieza</small><h4>Jabón líquido 800 ml</h4><strong>$ 2.648</strong><button class="add-button category-add" type="button" aria-label="Agregar Jabón líquido 800 ml">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="C002" data-price="2100" data-category="Limpieza">
+                            <div class="category-product-visual product-blue"><span>CLORO</span></div>
+                            <div class="category-product-body"><small>Limpieza</small><h4>Lavandina 1 L</h4><strong>$ 2.100</strong><button class="add-button category-add" type="button" aria-label="Agregar Lavandina 1 L">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="C003" data-price="3200" data-category="Limpieza">
+                            <div class="category-product-visual product-orange"><span>LIMPIADOR</span></div>
+                            <div class="category-product-body"><small>Limpieza</small><h4>Limpiador multiuso 750 ml</h4><strong>$ 3.200</strong><button class="add-button category-add" type="button" aria-label="Agregar Limpiador multiuso 750 ml">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="C004" data-price="2800" data-category="Limpieza">
+                            <div class="category-product-visual product-purple"><span>SUAVIZANTE</span></div>
+                            <div class="category-product-body"><small>Limpieza</small><h4>Suavizante para ropa 900 ml</h4><strong>$ 2.800</strong><button class="add-button category-add" type="button" aria-label="Agregar Suavizante para ropa 900 ml">+</button></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading"><div><span class="eyebrow">PERFUMERÍA</span><h3>Cuidado personal</h3></div></div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="C005" data-price="3900" data-category="Perfumería">
+                            <div class="category-product-visual product-pink"><span>SHAMPOO</span></div>
+                            <div class="category-product-body"><small>Perfumería</small><h4>Shampoo 400 ml</h4><strong>$ 3.900</strong><button class="add-button category-add" type="button" aria-label="Agregar Shampoo 400 ml">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="C006" data-price="2700" data-category="Perfumería">
+                            <div class="category-product-visual product-red"><span>JABÓN</span></div>
+                            <div class="category-product-body"><small>Perfumería</small><h4>Jabón de tocador x3</h4><strong>$ 2.700</strong><button class="add-button category-add" type="button" aria-label="Agregar Jabón de tocador x3">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="C007" data-price="4300" data-category="Perfumería">
+                            <div class="category-product-visual product-blue"><span>DESODORANTE</span></div>
+                            <div class="category-product-body"><small>Perfumería</small><h4>Desodorante corporal 150 ml</h4><strong>$ 4.300</strong><button class="add-button category-add" type="button" aria-label="Agregar Desodorante corporal 150 ml">+</button></div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="category-view" id="lacteosView" hidden>
+            <div class="container">
+                <div class="category-navigation">
+                    <button type="button" class="category-back" id="backFromLacteos">← Volver al inicio</button>
+                    <button type="button" class="category-next" data-category-target="limpieza">Limpieza y Perfumería →</button>
+                </div>
+
+                <div class="category-hero-heading">
+                    <span class="eyebrow">CATEGORÍA</span>
+                    <h2>Lácteos</h2>
+                    <p>Leches, yogures, quesos y otros productos refrigerados.</p>
+                </div>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading"><div><span class="eyebrow">LÁCTEOS</span><h3>Leches</h3></div></div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="L001" data-price="2600" data-category="Leches">
+                            <div class="category-product-visual product-blue"><span>LECHE</span></div>
+                            <div class="category-product-body"><small>Leches</small><h4>Leche entera 1 L</h4><strong>$ 2.600</strong><button class="add-button category-add" type="button" aria-label="Agregar Leche entera 1 L">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="L002" data-price="2800" data-category="Leches">
+                            <div class="category-product-visual product-blue"><span>DESCREMADA</span></div>
+                            <div class="category-product-body"><small>Leches</small><h4>Leche descremada 1 L</h4><strong>$ 2.800</strong><button class="add-button category-add" type="button" aria-label="Agregar Leche descremada 1 L">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="L003" data-price="3100" data-category="Leches">
+                            <div class="category-product-visual product-white"><span>CHOCOLATADA</span></div>
+                            <div class="category-product-body"><small>Leches</small><h4>Leche chocolatada 1 L</h4><strong>$ 3.100</strong><button class="add-button category-add" type="button" aria-label="Agregar Leche chocolatada 1 L">+</button></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading"><div><span class="eyebrow">LÁCTEOS</span><h3>Yogures</h3></div></div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="L004" data-price="1800" data-category="Yogures">
+                            <div class="category-product-visual product-pink"><span>YOGUR</span></div>
+                            <div class="category-product-body"><small>Yogures</small><h4>Yogur bebible frutilla 900 g</h4><strong>$ 1.800</strong><button class="add-button category-add" type="button" aria-label="Agregar Yogur bebible frutilla 900 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="L005" data-price="1900" data-category="Yogures">
+                            <div class="category-product-visual product-purple"><span>YOGUR</span></div>
+                            <div class="category-product-body"><small>Yogures</small><h4>Yogur bebible vainilla 900 g</h4><strong>$ 1.900</strong><button class="add-button category-add" type="button" aria-label="Agregar Yogur bebible vainilla 900 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="L006" data-price="2100" data-category="Yogures">
+                            <div class="category-product-visual product-orange"><span>YOGUR</span></div>
+                            <div class="category-product-body"><small>Yogures</small><h4>Yogur natural 190 g</h4><strong>$ 2.100</strong><button class="add-button category-add" type="button" aria-label="Agregar Yogur natural 190 g">+</button></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading"><div><span class="eyebrow">LÁCTEOS</span><h3>Quesos y untables</h3></div></div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="L007" data-price="4200" data-category="Quesos y untables">
+                            <div class="category-product-visual product-gold"><span>QUESO</span></div>
+                            <div class="category-product-body"><small>Quesos y untables</small><h4>Queso cremoso 250 g</h4><strong>$ 4.200</strong><button class="add-button category-add" type="button" aria-label="Agregar Queso cremoso 250 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="L008" data-price="3500" data-category="Quesos y untables">
+                            <div class="category-product-visual product-white"><span>UNTABLE</span></div>
+                            <div class="category-product-body"><small>Quesos y untables</small><h4>Queso untable 290 g</h4><strong>$ 3.500</strong><button class="add-button category-add" type="button" aria-label="Agregar Queso untable 290 g">+</button></div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="category-view" id="snacksView" hidden>
+            <div class="container">
+                <div class="category-navigation">
+                    <button type="button" class="category-back" id="backFromSnacks">← Volver al inicio</button>
+                    <button type="button" class="category-next" data-category-target="lacteos">Lácteos →</button>
+                </div>
+
+                <div class="category-hero-heading">
+                    <span class="eyebrow">CATEGORÍA</span>
+                    <h2>Snacks</h2>
+                    <p>Golosinas y snacks para cualquier momento del día.</p>
+                </div>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading">
+                        <div><span class="eyebrow">SNACKS</span><h3>Galletitas</h3></div>
+                    </div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="12112" data-price="1500" data-category="Galletitas">
+                            <div class="category-product-visual product-purple"><span>OREO</span></div>
+                            <div class="category-product-body"><small>Galletitas</small><h4>Galletitas Oreo 118 g</h4><strong>$ 1.500</strong><button class="add-button category-add" type="button" aria-label="Agregar Galletitas Oreo 118 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="S002" data-price="1700" data-category="Galletitas">
+                            <div class="category-product-visual product-orange"><span>CLÁSICAS</span></div>
+                            <div class="category-product-body"><small>Galletitas</small><h4>Galletitas clásicas 290 g</h4><strong>$ 1.700</strong><button class="add-button category-add" type="button" aria-label="Agregar Galletitas clásicas 290 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="S003" data-price="1900" data-category="Galletitas">
+                            <div class="category-product-visual product-brown"><span>CHOCOLATE</span></div>
+                            <div class="category-product-body"><small>Galletitas</small><h4>Galletitas con chocolate 170 g</h4><strong>$ 1.900</strong><button class="add-button category-add" type="button" aria-label="Agregar Galletitas con chocolate 170 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="S004" data-price="1800" data-category="Galletitas">
+                            <div class="category-product-visual product-gold"><span>RELLENAS</span></div>
+                            <div class="category-product-body"><small>Galletitas</small><h4>Galletitas rellenas 150 g</h4><strong>$ 1.800</strong><button class="add-button category-add" type="button" aria-label="Agregar Galletitas rellenas 150 g">+</button></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading">
+                        <div><span class="eyebrow">SNACKS</span><h3>Papas y snacks salados</h3></div>
+                    </div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="01984" data-price="4000" data-category="Papas y snacks salados">
+                            <div class="category-product-visual product-gold"><span>PAPAS</span></div>
+                            <div class="category-product-body"><small>Papas y snacks salados</small><h4>Papas clásicas 10 g</h4><strong>$ 4.000</strong><button class="add-button category-add" type="button" aria-label="Agregar Papas clásicas 10 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="S006" data-price="3200" data-category="Papas y snacks salados">
+                            <div class="category-product-visual product-orange"><span>QUESO</span></div>
+                            <div class="category-product-body"><small>Papas y snacks salados</small><h4>Snack de queso 70 g</h4><strong>$ 3.200</strong><button class="add-button category-add" type="button" aria-label="Agregar Snack de queso 70 g">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="S007" data-price="2800" data-category="Papas y snacks salados">
+                            <div class="category-product-visual product-red"><span>MANÍ</span></div>
+                            <div class="category-product-body"><small>Papas y snacks salados</small><h4>Maní salado 100 g</h4><strong>$ 2.800</strong><button class="add-button category-add" type="button" aria-label="Agregar Maní salado 100 g">+</button></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="subcategory-section">
+                    <div class="subcategory-heading">
+                        <div><span class="eyebrow">SNACKS</span><h3>Alfajores y golosinas</h3></div>
+                    </div>
+                    <div class="category-product-grid">
+                        <article class="category-product-card" data-product-id="S008" data-price="2200" data-category="Alfajores y golosinas">
+                            <div class="category-product-visual product-red"><span>ALFAJOR</span></div>
+                            <div class="category-product-body"><small>Alfajores y golosinas</small><h4>Alfajor de chocolate</h4><strong>$ 2.200</strong><button class="add-button category-add" type="button" aria-label="Agregar Alfajor de chocolate">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="S009" data-price="1200" data-category="Alfajores y golosinas">
+                            <div class="category-product-visual product-pink"><span>CARAMELOS</span></div>
+                            <div class="category-product-body"><small>Alfajores y golosinas</small><h4>Caramelos surtidos</h4><strong>$ 1.200</strong><button class="add-button category-add" type="button" aria-label="Agregar Caramelos surtidos">+</button></div>
+                        </article>
+                        <article class="category-product-card" data-product-id="S010" data-price="1600" data-category="Alfajores y golosinas">
+                            <div class="category-product-visual product-purple"><span>CHOCOLATE</span></div>
+                            <div class="category-product-body"><small>Alfajores y golosinas</small><h4>Barra de chocolate 60 g</h4><strong>$ 1.600</strong><button class="add-button category-add" type="button" aria-label="Agregar Barra de chocolate 60 g">+</button></div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="category-view" id="ofertasView" hidden>
+            <div class="container">
+                <button type="button" class="category-back" id="backFromOfertas">← Volver al inicio</button>
+
+                <div class="category-hero-heading">
+                    <span class="eyebrow">CATEGORÍA</span>
+                    <h2>Ofertas</h2>
+                    <p>Promociones y descuentos especiales para vos.</p>
+                </div>
+
+                <div class="empty-offers">
+                    <div class="empty-offers-icon">🎉</div>
+                    <strong>No tenemos ofertas por el momento!</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-overlay" id="cartOverlay" hidden></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true">
+        <div class="cart-drawer-header">
+            <div>
+                <span class="eyebrow cart-eyebrow">MI PEDIDO</span>
+                <h2 id="cartTitle">Tu pedido</h2>
+                <p id="cartItemCount">0 productos</p>
+            </div>
+            <button type="button" class="cart-close" id="closeCart" aria-label="Cerrar pedido">×</button>
+        </div>
+
+        <div class="cart-drawer-body" id="cartItems">
+            <div class="cart-empty">
+                <div class="cart-empty-icon">🛒</div>
+                <strong>Tu pedido está vacío</strong>
+                <span>Agregá productos con el botón + y aparecerán acá.</span>
+            </div>
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cartTotal">$ 0</strong>
+            </div>
+            <button type="button" class="checkout-button" id="checkoutButton" disabled>Continuar con el pedido</button>
+            <button type="button" class="clear-cart-button" id="clearCartButton" disabled>Vaciar pedido</button>
+            <button type="button" class="pending-order-drawer-button" id="pendingOrderDrawerButton" hidden>
+                <span>📋</span>
+                <span><strong>Tenés un pedido pendiente</strong><small id="pendingOrderDrawerNumber">#00000000</small></span>
+                <span>→</span>
+            </button>
+            <small>El método de pago se elegirá al confirmar el pedido.</small>
+        </div>
+    </aside>
+
+
+
+    <div class="checkout-backdrop" id="checkoutBackdrop" hidden></div>
+
+    <section class="checkout-modal" id="checkoutModal" aria-labelledby="checkoutTitle" aria-hidden="true" hidden>
+        <div class="checkout-modal-header">
+            <div>
+                <span class="eyebrow">FINALIZAR PEDIDO</span>
+                <h2 id="checkoutTitle">Completá tus datos</h2>
+                <p>Necesitamos estos datos para que el local pueda preparar y entregar tu pedido.</p>
+            </div>
+            <button type="button" class="checkout-close" id="checkoutClose" aria-label="Cerrar checkout">×</button>
+        </div>
+
+        <div class="checkout-progress" aria-label="Progreso del pedido">
+            <div class="checkout-progress-step active" data-checkout-progress="1"><span>1</span><strong>Datos</strong></div>
+            <div class="checkout-progress-line"></div>
+            <div class="checkout-progress-step" data-checkout-progress="2"><span>2</span><strong>Pago</strong></div>
+            <div class="checkout-progress-line"></div>
+            <div class="checkout-progress-step" data-checkout-progress="3"><span>3</span><strong>Revisar</strong></div>
+        </div>
+
+        <form id="checkoutForm" novalidate>
+            <div class="checkout-step is-active" data-checkout-step="1">
+                <div class="checkout-form-grid">
+                    <label class="checkout-field checkout-field-full">
+                        <span class="checkout-section-label">ENTREGA</span>
+                        <span>Nombre y apellido</span>
+                        <input type="text" id="checkoutName" name="name" autocomplete="name" placeholder="Ej. Juan Pérez" required>
+                        <small class="checkout-error" data-error-for="checkoutName"></small>
+                    </label>
+
+                    <label class="checkout-field checkout-field-full">
+                        <span>WhatsApp / teléfono</span>
+                        <input type="tel" id="checkoutPhone" name="phone" autocomplete="tel" placeholder="Ej. 11-1234-5678" required>
+                        <small class="checkout-error" data-error-for="checkoutPhone"></small>
+                    </label>
+
+                    <label class="checkout-field">
+                        <span>Calle</span>
+                        <input type="text" id="checkoutStreet" name="street" autocomplete="street-address" placeholder="Ej. Roma" required>
+                        <small class="checkout-error" data-error-for="checkoutStreet"></small>
+                    </label>
+
+                    <label class="checkout-field">
+                        <span>Altura</span>
+                        <input type="text" id="checkoutNumber" name="number" inputmode="numeric" placeholder="Ej. 1234" required>
+                        <small class="checkout-error" data-error-for="checkoutNumber"></small>
+                    </label>
+
+                    <label class="checkout-field checkout-field-full">
+                        <span>Entre calles</span>
+                        <input type="text" id="checkoutBetween" name="between" placeholder="Ej. Calle A y Calle B" required>
+                        <small class="checkout-error" data-error-for="checkoutBetween"></small>
+                    </label>
+
+                    <label class="checkout-field checkout-field-full">
+                        <span>Observaciones <em>opcional</em></span>
+                        <textarea id="checkoutNotes" name="notes" rows="3" placeholder="Ej. Tocar el timbre, hay perros, porton verde, etc." maxlength="240"></textarea>
+                    </label>
+                </div>
+
+                <div class="checkout-actions checkout-actions-right">
+                    <button type="button" class="checkout-secondary" id="backToOrderButton">Volver al pedido</button>
+                    <button type="button" class="checkout-primary" data-checkout-next="1">Siguiente</button>
+                </div>
+            </div>
+
+            <div class="checkout-step" data-checkout-step="2" hidden>
+                <div class="checkout-step-heading">
+                    <span class="checkout-section-label">PAGO</span>
+                    <strong>¿Cómo vas a pagar?</strong>
+                    <span>Elegí cómo preferís pagar. El pago se coordina directamente con el local.</span>
+                </div>
+
+                <div class="payment-options">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="Efectivo">
+                        <span class="payment-option-content"><strong>Efectivo</strong><small>Pagás al recibir.</small></span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="Mercado Pago">
+                        <span class="payment-option-content"><strong>Mercado Pago</strong><small>El local te indicará cómo realizar el pago.</small></span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="Transferencia">
+                        <span class="payment-option-content"><strong>Transferencia</strong><small>La transferencia se coordina por fuera de la web.</small></span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="Tarjeta">
+                        <span class="payment-option-content"><strong>Tarjeta</strong><small>El local te indicará cómo realizar el pago.</small></span>
+                    </label>
+                </div>
+                <small class="checkout-error checkout-payment-error" id="checkoutPaymentError"></small>
+
+                <div class="checkout-actions">
+                    <button type="button" class="checkout-secondary" data-checkout-back="2">Atrás</button>
+                    <button type="button" class="checkout-primary" data-checkout-next="2">Siguiente</button>
+                </div>
+            </div>
+
+            <div class="checkout-step" data-checkout-step="3" hidden>
+                <div class="checkout-step-heading">
+                    <span class="checkout-section-label">REVISIÓN</span>
+                    <strong>Revisá tu pedido</strong>
+                    <span>Revisá los datos y el total antes de enviar tu pedido.</span>
+                </div>
+
+                <div class="checkout-review-grid">
+                    <div class="checkout-review-card">
+                        <span class="checkout-review-label">ENTREGA</span>
+                        <h3>Datos del pedido</h3>
+                        <div class="checkout-review-data">
+                            <div><small>Nombre</small><strong id="reviewCustomer"></strong></div>
+                            <div><small>WhatsApp / teléfono</small><strong id="reviewPhone"></strong></div>
+                            <div><small>Dirección</small><strong id="reviewAddress"></strong></div>
+                            <div><small>Entre calles</small><strong id="reviewBetween"></strong></div>
+                            <div><small>Método de pago</small><strong id="reviewPayment"></strong></div>
+                            <div><small id="reviewNotes" class="checkout-review-muted"></small></div>
+                        </div>
+                    </div>
+
+                    <div class="checkout-order-card">
+                        <div class="checkout-order-card-header">
+                            <span class="checkout-review-label">PRODUCTOS</span>
+                            <strong id="reviewItemCount"></strong>
+                        </div>
+                        <h3>Tu pedido</h3>
+                        <div id="reviewItems" class="checkout-review-items"></div>
+                        <div class="checkout-review-total">
+                            <span>Total</span>
+                            <strong id="reviewTotal"></strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-actions">
+                    <button type="button" class="checkout-secondary" data-checkout-back="3">Volver a editar</button>
+                    <button type="button" class="checkout-primary checkout-confirm-button" id="confirmOrderButton">Confirmar pedido</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="checkout-step checkout-success-step" data-checkout-step="4" hidden>
+            <div class="checkout-success-icon">✓</div>
+            <span class="eyebrow">PEDIDO ENVIADO</span>
+            <h2>Tu pedido quedó pendiente</h2>
+            <p>El local recibió tu pedido y se encargará de aceptarlo o rechazarlo. Podrán contactarte por WhatsApp si necesitan confirmar algún detalle.</p>
+            <p class="checkout-success-contact">¿Tenés alguna consulta o necesitás hacer un reclamo? <a href="https://wa.me/5491133550015" target="_blank" rel="noopener noreferrer">Escribinos por WhatsApp al 11-3355-0015.</a></p>
+            <div class="checkout-pending-card">
+                <span>Número de pedido</span>
+                <strong id="pendingOrderNumber">#0000</strong>
+                <small>Estado: <b>PENDIENTE</b></small>
+            </div>
+            <button type="button" class="checkout-primary checkout-success-button" id="finishCheckoutButton">Volver a la tienda</button>
+        </div>
+    </section>
+
+
+
+    <div class="account-backdrop" id="accountBackdrop" hidden></div>
+
+    <section class="account-modal" id="accountModal" aria-labelledby="accountTitle" aria-hidden="true" hidden>
+        <div class="account-modal-header">
+            <div>
+                <span class="eyebrow">MI CUENTA</span>
+                <h2 id="accountTitle">Tus datos de entrega</h2>
+                <p>Guardá tus datos para que al hacer un pedido aparezcan completos automáticamente.</p>
+            </div>
+            <button type="button" class="account-close" id="accountClose" aria-label="Cerrar mi cuenta">×</button>
+        </div>
+
+        <form id="accountForm" novalidate>
+            <div class="account-form-grid">
+                <label class="account-field account-field-full">
+                    <span>Nombre y apellido</span>
+                    <input type="text" id="profileName" autocomplete="name" placeholder="Ej. Juan Pérez" required>
+                </label>
+
+                <label class="account-field account-field-full">
+                    <span>WhatsApp / teléfono</span>
+                    <input type="tel" id="profilePhone" autocomplete="tel" placeholder="Ej. 11-1234-5678" required>
+                </label>
+
+                <label class="account-field">
+                    <span>Calle</span>
+                    <input type="text" id="profileStreet" autocomplete="street-address" placeholder="Ej. Roma" required>
+                </label>
+
+                <label class="account-field">
+                    <span>Altura</span>
+                    <input type="text" id="profileNumber" inputmode="numeric" placeholder="Ej. 1234" required>
+                </label>
+
+                <label class="account-field account-field-full">
+                    <span>Entre calles</span>
+                    <input type="text" id="profileBetween" placeholder="Ej. Calle A y Calle B" required>
+                </label>
+            </div>
+
+            <p class="account-storage-note" id="accountStorageNote">Los datos se guardarán solo en esta sesión y en este dispositivo.</p>
+            <p class="account-error" id="accountError" role="alert"></p>
+
+            <div class="account-actions">
+                <button type="button" class="account-secondary" id="accountClearButton">Limpiar datos</button>
+                <div class="account-actions-right">
+                    <button type="button" class="account-secondary" id="accountCancelButton">Cancelar</button>
+                    <button type="submit" class="account-primary">Guardar datos</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <div class="pending-order-backdrop" id="pendingOrderBackdrop" hidden></div>
+
+    <section class="pending-order-modal" id="pendingOrderModal" aria-labelledby="pendingOrderTitle" aria-hidden="true" hidden>
+        <div class="pending-order-header">
+            <div>
+                <span class="eyebrow">MI PEDIDO</span>
+                <h2 id="pendingOrderTitle">Pedido pendiente</h2>
+                <p id="pendingOrderDate">Pedido realizado recientemente</p>
+            </div>
+            <button type="button" class="pending-order-close" id="pendingOrderClose" aria-label="Cerrar pedido">×</button>
+        </div>
+
+        <div class="pending-order-status">
+            <span class="pending-order-status-dot"></span>
+            <span>Estado</span>
+            <strong>PENDIENTE</strong>
+        </div>
+
+        <div class="pending-order-number-card">
+            <span>NÚMERO DE PEDIDO</span>
+            <strong id="pendingOrderModalNumber">#00000000</strong>
+        </div>
+
+        <div class="pending-order-grid">
+            <div class="pending-order-card">
+                <span class="pending-order-label">ENTREGA</span>
+                <h3>Datos del pedido</h3>
+                <div class="pending-order-data">
+                    <div><small>Nombre</small><strong id="pendingOrderCustomer"></strong></div>
+                    <div><small>WhatsApp / teléfono</small><strong id="pendingOrderPhone"></strong></div>
+                    <div><small>Dirección</small><strong id="pendingOrderAddress"></strong></div>
+                    <div><small>Entre calles</small><strong id="pendingOrderBetween"></strong></div>
+                    <div><small>Método de pago</small><strong id="pendingOrderPayment"></strong></div>
+                    <div id="pendingOrderNotesRow" hidden><small>Observaciones</small><strong id="pendingOrderNotes"></strong></div>
+                </div>
+            </div>
+
+            <div class="pending-order-card">
+                <div class="pending-order-card-top">
+                    <div>
+                        <span class="pending-order-label">PRODUCTOS</span>
+                        <h3>Tu pedido</h3>
+                    </div>
+                    <strong id="pendingOrderItemCount"></strong>
+                </div>
+                <div id="pendingOrderItems" class="pending-order-items"></div>
+                <div class="pending-order-total"><span>Total</span><strong id="pendingOrderTotal"></strong></div>
+            </div>
+        </div>
+
+        <div class="pending-order-message">
+            El local recibió tu pedido. Por ahora queda <strong>pendiente</strong> hasta que sea aceptado.
+        </div>
+
+        <div class="pending-order-actions">
+            <button type="button" class="pending-order-edit-button" id="pendingOrderEditButton">Modificar pedido</button>
+            <button type="button" class="pending-order-cancel-button" id="pendingOrderCancelButton">Cancelar pedido</button>
+        </div>
+    </section>
+
+    <div class="order-update-backdrop" id="orderUpdateBackdrop" hidden></div>
+
+    <section class="order-update-modal" id="orderUpdateModal" aria-labelledby="orderUpdateTitle" aria-hidden="true" hidden>
+        <div class="order-update-header">
+            <div>
+                <span class="eyebrow">MODIFICAR PEDIDO</span>
+                <h2 id="orderUpdateTitle">¿Querés actualizar tu pedido?</h2>
+                <p>Se aplicarán los cambios que hiciste en los productos y cantidades. Tus datos de entrega y método de pago se mantienen igual.</p>
+            </div>
+            <button type="button" class="order-update-close" id="orderUpdateClose" aria-label="Cerrar confirmación">×</button>
+        </div>
+
+        <div class="order-update-card">
+            <div>
+                <span>Pedido</span>
+                <strong id="orderUpdateNumber">#00000000</strong>
+            </div>
+            <div>
+                <span>Productos</span>
+                <strong id="orderUpdateItemCount">0 productos</strong>
+            </div>
+            <div>
+                <span>Nuevo total</span>
+                <strong id="orderUpdateTotal">$ 0</strong>
+            </div>
+        </div>
+
+        <div class="order-update-note">
+            <strong>Se conservarán tus datos.</strong>
+            <span>Nombre, teléfono, dirección, observaciones y método de pago seguirán siendo los del pedido pendiente actual.</span>
+        </div>
+
+        <div class="order-update-actions">
+            <button type="button" class="order-update-secondary" id="orderUpdateBackButton">Volver al pedido</button>
+            <button type="button" class="order-update-primary" id="orderUpdateConfirmButton">Sí, actualizar pedido</button>
+        </div>
+    </section>
+
+    <div class="order-update-backdrop" id="newOrderConfirmationBackdrop" hidden></div>
+
+    <section class="order-update-modal" id="newOrderConfirmationModal" aria-labelledby="newOrderConfirmationTitle" aria-hidden="true" hidden>
+        <div class="order-update-header">
+            <div>
+                <span class="eyebrow">PEDIDO PENDIENTE</span>
+                <h2 id="newOrderConfirmationTitle">¿Querés iniciar un pedido nuevo?</h2>
+                <p>Si confirmás el nuevo pedido, el pendiente actual se cancelará y será reemplazado. Si preferís modificarlo, volvé al carrito y usá “Modificar pedido” desde el acceso de arriba a la derecha o al pie del carrito.</p>
+            </div>
+            <button type="button" class="order-update-close" id="newOrderConfirmationClose" aria-label="Cerrar aviso">×</button>
+        </div>
+
+        <div class="order-update-actions">
+            <button type="button" class="order-update-secondary" id="newOrderConfirmationBackButton">Volver al carrito</button>
+            <button type="button" class="order-update-primary" id="newOrderConfirmationContinueButton">Continuar con un pedido nuevo</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <a href="#" class="brand footer-brand">
+                    <span class="brand-mark">TM</span>
+                    <span><strong>Autoservicio Tomate</strong><small>Pedidos simples, compras rápidas</small></span>
+                </a>
+                <p>Una experiencia sencilla para consultar productos y preparar pedidos.</p>
+            </div>
+            <div>
+                <h3>Comprar</h3>
+                <a href="#productos">Productos</a>
+                <a href="#categorias">Categorías</a>
+                <a href="#">Ofertas</a>
+            </div>
+            <div>
+                <h3>Ayuda</h3>
+                <a href="#">Mi cuenta</a>
+                <a href="#">Mi pedido</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div>
+                <h3>Contacto</h3>
+                <span>WhatsApp · 11-3355-0015</span>
+                <span>Lunes a Domingo · 18hs a 22hs</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">© 2026 Autoservicio Tomate · Todos los derechos reservados</div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js?v=4"></script>
+</body>
+</html>
